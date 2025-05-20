@@ -7,3 +7,4 @@ Else run `set-executionpolicy bypass -Scope Process -force` in regular powershel
 * check_disk_all_volumes.ps1 - This script runs checkdisk on all environments .
 * download_calibre.ps1 - This script update Calibre Software to latest version .    
 * download_libreoffice.ps1 - This script update Libreoffice to latest version .
+* download_hwmonitor.ps1 - This script updates CPUID HWMonitor to latest version .
