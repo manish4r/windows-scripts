@@ -10,7 +10,7 @@ if (!([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]
 }
 # Extract volume GUIDs
 #$volumeGUIDs = $volumes -match '\\?\Volume{[a-f0-9-]+}'
-$volumeGUIDs = echo $volumes | select-string "Volume{"
+$volumeGUIDs = Write-Output $volumes | select-string "Volume{"
 # Loop through each volume and scan it
 foreach ($volume in $volumeGUIDs) {
     # Remove trailing backslash
