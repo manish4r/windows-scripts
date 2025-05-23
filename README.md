@@ -8,3 +8,4 @@ Else run `set-executionpolicy bypass -Scope Process -force` in regular powershel
 * download_calibre.ps1 - This script update Calibre Software to latest version .    
 * download_libreoffice.ps1 - This script update Libreoffice to latest version .
 * download_hwmonitor.ps1 - This script updates CPUID HWMonitor to latest version .
+* download_LinuxReader.ps1 - This script updates Diskinternals Linux Reader to latest version .
