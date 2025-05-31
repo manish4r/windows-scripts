@@ -10,3 +10,4 @@ Else run `set-executionpolicy bypass -Scope Process -force` in regular powershel
 * download_hwmonitor.ps1 - This script updates CPUID HWMonitor to latest version .
 * download_LinuxReader.ps1 - This script updates Diskinternals Linux Reader to latest version . This script can be currently run only in foreground .
 * download_7zip.ps1 - This script installs or updates 7 Zip program by Igor Pavlov to latest version . This script can be currently run only in foreground .
+* download_transmission.ps1 - This scrippt installs or updates Transmission program to latest version . This script can be currently run only in foreground .
