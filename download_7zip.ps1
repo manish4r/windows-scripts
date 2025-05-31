@@ -42,8 +42,8 @@ if ( $(get-appPackage -name Microsoft.PowerShell) )
         Start-Process msiexec.exe -Wait -ArgumentList "/i 7z${ver}-x64.msi /lie $PWD\7z_install.log"
         Remove-Item 7z${ver}-x64.msi
         $inst_ver=$(get-content "$pgmf\7-Zip\History.txt" | select-string ^[0-9] | select-object -first 1 | ForEach-Object{($_ -split "\s+")[0]})
-        Write-Output "Current installed version is $inst_ver $Env:temp\7z_install.log"
-        Write-Output "Detailed installation logs can be found in "
+        Write-Output "Current installed version is $inst_ver"
+        Write-Output "Detailed installation logs can be found in $Env:temp\7z_install.log"
         Write-Output "This Window will close in 10 seconds..."
         Start-Sleep 10
     }
