@@ -29,6 +29,7 @@ if ( $(get-appPackage -name Microsoft.PowerShell) )
     {
         Write-Output "Downloading and installing..."
         $urld="https://eu.diskinternals.com/download/Linux_Reader.exe"
+        Set-Location $Env:temp
         invoke-webrequest -Uri $urld -Outfile Linux_Reader.exe
         Start-Process -Wait Linux_Reader.exe
         Remove-Item Linux_Reader.exe

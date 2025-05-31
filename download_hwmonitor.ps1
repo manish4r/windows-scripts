@@ -16,6 +16,7 @@ if ($ver)
 	{
 		Write-Output "Downloading version ${verw}"
 		$url="https://download.cpuid.com/hwmonitor/hwmonitor_${verw}.zip"
+		Set-Location $Env:temp
 		invoke-webrequest -Uri $url -Outfile hwmonitor.zip
 		Expand-Archive -Path .\hwmonitor.zip -DestinationPath $install_loc -Force
 		remove-item hwmonitor.zip
