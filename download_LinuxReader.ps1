@@ -9,6 +9,7 @@ if ( $(get-appPackage -name Microsoft.PowerShell) )
     $url="https://www.diskinternals.com/linux-reader/"
 	invoke-webrequest $url -Outfile lr_webpage
     $ver=$($(Get-Content lr_webpage |  select-string "GET IT FREE" | ForEach-Object{($_ -split "\s+")[10]}).remove(4))
+    write-output "Latest Website on website is $ver"
     Remove-Item lr_webpage
     $inst_ver=$(Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName,DisplayVersion  | select-string "Linux" | ForEach-Object{($_ -split "=+")[2]}).remove(4)
     if($inst_ver)
